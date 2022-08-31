@@ -1,0 +1,4 @@
+operandoA = 8
+operandoB = 5
+suma: int = operandoA + operandoB
+print(f'EL reaultado de la suma es: {suma}')
