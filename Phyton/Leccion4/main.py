@@ -41,7 +41,12 @@ else:
 print(len(nombres)) # Le pasamos un parametro
 
 # Agregamos un elemento a la lista, se agrega al final
-nombres.append("Marcelo")
+nombres.append("Marcelo") # String
+nombres.append([1, 2, 3]) # Lista dentro de la lista
+nombres.append(True) # Booleano
+nombres.append(10.45) # Float
+nombres.append([4, 5]) # Lista
+nombres.append(7) # entero
 print(nombres)
 
 # Insertar un elemento en un indice especifico
@@ -104,6 +109,142 @@ print("\n", cocina) # para que haga el salto de linea con el for
 # eliminar la tupla
 # del cocina
 # print(cocina)
+
+# Tipo Set, imprime de forma aleatoria
+planetas = {"Marte", "Jupiter", "Venus"}
+print(planetas)
+print(len(planetas)) # nos muestra la cantidad o largo del set
+
+# Revisar si un elemento esta en el set
+print("Marte" in planetas) # booleano, nos dice si el elemento esta en el set
+print("Jupiter" not in planetas) # nos dice si no esta en el set
+
+# Agregar elemento
+planetas.add("Tierra") # add es una funcion para agregar
+print(planetas)
+# En el tipo set no se pueden agregar elementos duplicados, si repito no pasa nada
+# La coleccion del tipo set nos puede servir para evitar elementos duplicados
+
+# Eliminar elementos, puede arrojar un error si el elemento no existe
+# planetas.remove("Saturno")
+planetas.remove("Jupiter")
+print(planetas)
+planetas.discard("Tierra") # Si no existe el elemento o esta mal escrito no pasa nada, no tira error
+print(planetas)
+
+# Limpiar set
+planetas.clear()
+print(planetas)
+
+# Eliminar set
+# del planetas
+print(planetas)
+
+# Diccionario en Phyton
+# Son colecciones
+# "Maradona" es la llave. : 10 es el valor
+# Un diccionario esta compuesto por dos elementos
+# una llave y un valor asociado
+# dict(key,value)
+diccionario = {
+    "IDE":"Integrated Development Environment",
+    "POO": "Programación Orientada a Objetos",
+    "SABD": "Sistema de Administración de Base de Datos"
+}
+#print(diccionario)
+
+ # Para conocer el largo de los elementos o la cantidad de elementos
+print(len(diccionario))
+print(diccionario)
+
+# acceder a un diccionario con la llave (key)
+print(diccionario['IDE'])
+# o tambien puede ser
+print(diccionario.get('POO'))
+# o tambien
+print(diccionario.get('SABD'))
+
+# Modificar elementos del diccionario
+diccionario['IDE'] = 'Entorno de Desarrollo Integrado'
+print(diccionario)
+
+# como recorrer los elementos
+for termino in diccionario: # muestra las llaves
+    print(termino)
+
+# para recorrer los valores del diccionario
+for termino, valor in diccionario.items():
+    print(termino, valor)
+
+# otras maneras de acceder a un diccionario
+for termino in diccionario.keys():
+    print(termino) # muestra solo las llaves
+
+for valor in diccionario.values():
+    print(valor) # nos muestra solo los valores
+
+# Comprobar la existencia de un elemento
+print('IDE' in diccionario) # booleano
+print('IDEA' not in diccionario) # si no esta
+
+# Agregar un elemento
+diccionario['PK'] = 'Primary Key'
+print(diccionario)
+
+# Eliminar un elemento
+diccionario.pop('SABD')
+print(diccionario)
+
+# Vaciar un diccionario
+diccionario.clear()
+print(diccionario)
+
+# Borrar un diccionario
+del diccionario # El diccionario se borró
+
+# Listas y Tuplas pertenecen a colecciones en Phyton
+# se conocen en otros lenguajes como arreglos o vectores
+
+# Concatenamos Listas
+lista1 = [1, 2, 3, 1]
+lista2 = [4, 5, 6, 1]
+lista3 = lista1 + lista2
+print(lista3)
+
+# Para agregar varios elementos a una lista
+lista3.extend([7, 8, 9])
+print(lista3)
+
+# Funcion para saber en que indice esta un elemento
+print(lista3.index(5))
+
+# Para ver cuantos valores repetidos hay en una lista
+print(lista3.count(1))
+
+# para poner la lista al reves
+lista3.reverse()
+print(lista3)
+
+# Multiplicar la lista repitiendo sus elementos
+lista = [1, 2, 3] * 2
+print(lista)
+
+# Métodos de ordenamientos por defecto de manero ascendente
+lista3.sort()
+print(lista3)
+# de manera descendente
+lista3.sort(reverse = True)
+print(lista3)
+
+# Repaso Tuplas
+# Las tuplas son lista inmutables, no se pueden modificar
+# Pueden tambien tener valores diferentes, cadenas, float, bolleanos
+tupla = (4, 'Hola', 6.78, [1, 2, 78, 4], 4, 'Hola')
+print(tupla)
+
+print(4 in tupla) # preguntamos si esta el elemento 4
+print(5 not in tupla) # preguntamos si no esta
+
 
 
 
