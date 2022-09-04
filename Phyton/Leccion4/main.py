@@ -244,6 +244,147 @@ print(tupla)
 
 print(4 in tupla) # preguntamos si esta el elemento 4
 print(5 not in tupla) # preguntamos si no esta
+# Lo que podemos hacer dentro de tuplas son: index, count, len
+# En tuplas se puede convertir de tupla a lista y de lista a tupla
+
+# Repaso de set o conjunto
+# para definir un conjunto
+# Conjunto: elementos desordenados
+conjunto = set() # Lo inicializamos
+conjunto1 = {'bye'} # lo inicializamos, tiene que tener un elemento al menos si o si para que luego al agregar elementos no tire error
+conjunto.add(7) # añadir datos
+conjunto.add('Hola') # añadimos otro elemento
+print(conjunto)
+conjunto1.add('Hola')
+print(conjunto1)
+
+# Preguntamos si el número 3 está en el conjunto1
+print(3 not in conjunto1) # nos devuelve un valor booleano
+
+# Como hacer la igualdad de los conjuntos
+print(conjunto1 == conjunto) # nos devuelve un valor bolleano
+
+# Operaciones en conjuntos
+# Union de conjuntos
+conjunto3 = conjunto1 | conjunto # La linea une los conjuntos
+print(conjunto3)
+
+# Intersección: es el elemento que tienen en comun
+conjunto3 = conjunto1 & conjunto # que elemento tienen en comun?
+print(conjunto3) # imprime el elemento que tienen en comun
+
+conjunto3 = conjunto1 - conjunto # visualizar los elementos del conjunto 1 y no del otro
+print(conjunto3)
+conjunto3 = conjunto - conjunto1 # que elemento esta en el dos pero no en el 1
+print(conjunto3)
+
+# que elemento no compartem
+conjunto3 = conjunto1 ^ conjunto
+print(conjunto3)
+
+# como determinar si un conjunto es un subconjunto de otro
+conjunto3 = conjunto1 | conjunto
+print(conjunto1.issubset(conjunto3)) # no da un valor booleano
+print(conjunto.issubset(conjunto3))
+print(conjunto3.issubset(conjunto1))
+
+# como saber si ambos conjuntos son inconexos, no comparten ningun elemento
+print(conjunto3.issuperset(conjunto1))
+print(conjunto3.issuperset(conjunto))
+print(conjunto.issuperset(conjunto3))
+
+# como saber si no compartes ningun elemento, disconexos
+print(conjunto1.isdisjoint(conjunto))
+
+# convertir un conjunto en totalmente inmutable
+conjunto1 = frozenset
+# ahora no se puede modificar nda, ni agregar, ni eliminar ningun elemento del conjunto
+
+# Repaso Diccionarios
+diccionarioNuevo = {'Azul' : 'Blue',
+                    'Rojo':'Red',
+                    'Verde':'Green',
+                    'Amarillo' : 'Yellow'
+                    }
+# Como eliminar un elemento
+del(diccionarioNuevo['Azul'])
+print(diccionarioNuevo)
+# Los diccionarios pueden almacenar diferentes tipos de datos
+diccionario2 = {'Ariel': {'edad' : 40, 'Altura': 1.83},'Osvaldo':[45, 1.85],'Natalia': [35, 1.65]}
+print(diccionario2)
+
+seleccionArgentina = {
+    10: {'Nombre': 'Lionel Messi', 'Edad': 35, 'Altura': 1.70, 'Precio': '50 millones', 'Posicion': 'extremo'},
+    11:{'Nombre': 'Ángel Di María', 'Edad':34, 'Altura':1.80, 'Precio':'12 millones','Posición':'Extremos derecho'},
+    9:{'Nombre':'Julián Álvarez', 'Edad':22, 'Altura':1.70, 'Precio': '23 millones','Posición':'Delantero central'},
+    21:{'Nombre':'Paulo Dybala','Edad':28,'Altura':1.77, 'Precio':'35 millones','Posición':'Mediapunta'},
+    22:{'Nombre':'Lautaro Martínez','Edad':25,'Altura':1.74,'Precio':'75 millones','Posición':'Deltantero centro'},
+    23:{'Nomnbre': 'Emiliano Martínez','Edad':30,'Altura':1.95,'Precio':'28 millones','Posición':'Portero'},
+    12:{'Nombre':'Gerónimo Rulli','Edad':30,'Altura':1.89,'Precio':'6 millones','Posición':'Portero'},
+    1:{'Nombre':'Franco Armani','Edad':35,'Altura':1.89,'Precio':'3,50 millones','Posición':'Portero'},
+    13:{'Nombre':'Cristian Romero','Edad':24,'Altura':1.85,'Precio':'48 millones','Posición':'Defensa Central'}
+     }
+print(seleccionArgentina[10]) # Nos muestra el 10
+print(seleccionArgentina.values()) # para ver solo los valores del diccionario
+
+# recorremos nuestro arreglo con un ciclo for
+for llave in seleccionArgentina:
+    print(llave)
+
+for valor in seleccionArgentina.values():
+    print(valor)
+
+# Para ver todo
+for llave, valor in seleccionArgentina.items():
+    print(llave,valor)
+
+# Ver el tamaño, la cantidad de elementos que tiene nuestro diccionario
+print('Tenemos cargados en el diccionario la cantidad de jugadores: ')
+print(len(seleccionArgentina))
+
+# METODO CON LISTAS LLAMADO PILAS
+pila = [1,2,3]
+# en una pila no podemos sacar el primer elemento puesto, siempre trabajamos con el ultimo elemento agregado
+# agregar elementos a la pila por el final
+# el primer elemento queda abajo
+
+# Agregamos
+pila.append(4)
+pila.append(5)
+print(pila)
+
+# Sacando elementos por el final
+pila.pop() # saca y retorna, podemos capturar el elemento que se elimina
+print(pila)
+
+# como retornar el elemento borrado
+elementoBorrado = pila.pop()
+print(f'Sacamos el elemento: {elementoBorrado}')
+print(f'La pila ahora quedó asi: {pila}')
+
+# METODO CON LISTAS LLAMADO COLA
+# Estructuras de datos de tipo FIFO
+# First input(primero en entrar)/first output(primero en salir)
+# esto quiere decir que el primero que llega es el primero que atienden por ejemplo y sale
+# el que llega se agrega al final
+cola = ['Ariel','Osvaldo','Liliana','Pilar']
+
+# Agregamos elementos a la cola
+cola.append('Natalia')
+cola.append('José')
+print(cola)
+
+# Sacamos elementos de la cola
+seRetira = cola.pop(0)
+print(f'Atendido: {seRetira}')
+print(cola)
+seRetira = cola.pop(0)
+print(f'Atendido: {seRetira}')
+print(cola)
+
+
+
+
 
 
 
