@@ -1,6 +1,5 @@
 
 import java.util.Scanner;
-
 /* Una compañia de venta de carros usados, paga a su personal
 de ventas un salario de $1000 mensauales mas una comision de $150
 por cada carro vendido, mas el 5% del valor de la venta por carro
@@ -10,7 +9,6 @@ Hacer un programa que calcule e imprima el salario
 mensual de un vendedor dado
 El salario de 1000 lo vamos a manejar como un dato constante
 pa asignarlo debemos usar la palabra reservada "final"*/
-
 
 public class Ejercicio7 {
     public static void main(String[] args) {
