@@ -80,3 +80,39 @@ def listarNombres(*nombres): # desconocemos la cantidad de argumentos
 listarNombres('Lucas', 'Jose', 'Claudia', 'Rosa', 'María')
 listarNombres('Marcos', 'Daniel', 'Romina','Pepe','Marcela')
 
+# ARGUMENTOS VARIABLES PARA UN DICCIONARIO
+def listarTerminos(**terminos): # parametro para que podamos recibir un diccionario completo
+    for llave, valor in terminos.items(): # para recorrer diccionarios
+        print(f'{llave} : {valor}')
+
+listarTerminos() # no recibe nada, nada va a mostrar
+listarTerminos(IDE = 'Intergrated Develoment Enviroment', PK = 'Primauy Key')
+listarTerminos(Nombre = 'Lionel Messi')
+
+# LISTA DE ELEMENTOS CON FUNCIONES (CONVERTIR)
+def desplegarNombres(nombres):
+    for nombre in nombres:
+        print(nombre)
+nombres2 = ['Tito', 'Pedro', 'Carlos']
+desplegarNombres(nombres2)
+desplegarNombres('Carla') # lo presenta como cadena
+# desplegarNombres(10, 11) # no son objetos iterables
+desplegarNombres((10,)) # lo convertimos en tupla y si ejecuta
+desplegarNombres([22, 55]) # lo convertimos en lista
+
+# FUNCIONES RECURSIVAS CON FACTORIAL (HACER LA TAREA)
+# Las funciones recursivas se llaman a si mismas para ralizar una tarea
+# como hacer para que no sew vuelva un circulo infinito
+def factorial(numero):
+    if numero == 1: # caso base
+        return 1
+    else: # caso recursivo
+        return numero * factorial(numero-1)
+numeroFactorial = int(input('Digite el número para calcular el factorial'))
+resultado = factorial(5) # lo hacemos en codigo duro
+print(f'El factorial del número {numeroFactorial} es: {resultado}')
+
+
+
+
+
