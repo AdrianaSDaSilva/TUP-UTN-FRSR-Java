@@ -14,4 +14,5 @@ var objeto = {     // Tipo Objeto
     apellido: 'Betancud',
     telefono: '1234567893'
 }
-console.log(objeto);
+console.log(objeto); // imprimo por consola el objeto
+
