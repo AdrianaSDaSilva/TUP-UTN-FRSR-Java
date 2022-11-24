@@ -11,7 +11,6 @@ print(f'Cálculo del área del cuadrado: {cuadrado1.calcular_area()}')
 print(Cuadrado.mro())
 
 print(cuadrado1)
-
 rectangulo1 = Rectangulo(3, 8, 'Verde')
 print(f'Calculo del area del rectangulo: {rectangulo1.calcular_area()}')
 print(rectangulo1)
